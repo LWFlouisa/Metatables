@@ -29,7 +29,7 @@ conditions = {
 
 This becomes:
 
-~~~
+~~~ruby
 parallel_conditons = {
   "epee"  => "ishi",
   "ishi"  => "bache",
@@ -44,7 +44,7 @@ parallel_conditons = {
 Such as modifying a hash table without overwriting the previous hash table.
 
 ## Parallel Conditions
-~~~
+~~~ruby
 parallel_conditions = {
   "epee"  => "ishi",
   "ishi"  => "bache",
