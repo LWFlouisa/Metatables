@@ -1,0 +1,2 @@
+# Metatables
+Tables about tables.
