@@ -42,3 +42,27 @@ parallel_conditons = {
 ~~~
 
 Such as modifying a hash table without overwriting the previous hash table.
+
+## Parallel Conditions
+~~~
+parallel_conditions = {
+  "epee"  => "ishi",
+  "ishi"  => "bache",
+  "bache" => "epee",
+}, {
+  "active"      => "semi-active",
+  "semi-active" => "paused",
+  "paused"      => "active",
+}
+
+possible_conditions = [
+  [[parallel_conditions[0], parallel_conditions[0]], [parallel_conditions[0], parallel_conditions[1]]],
+  [[parallel_conditions[1], parallel_conditions[0]], [parallel_conditions[1], parallel_conditions[1]]],
+]
+
+main_conditions      = possible_conditions[0][0][0]
+secondary_conditions = possible_conditions[0][1][1]
+
+puts main_conditions["epee"]
+puts secondary_conditions["semi-active"]
+~~~
